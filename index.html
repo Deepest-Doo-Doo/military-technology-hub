@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Military Technology Hub</title>
+
+<style>
+body {
+  margin:0;
+  font-family:Arial;
+  background: linear-gradient(135deg, #0f3d0f, #1a661a);
+  color:white;
+  animation: fadeIn 0.6s ease-in;
+}
+
+/* PAGE FADE */
+@keyframes fadeIn {
+  from {opacity:0;}
+  to {opacity:1;}
+}
+
+/* NAVBAR */
+nav {
+  background: rgba(0,0,0,0.8);
+  padding: 14px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+}
+
+nav a {
+  color:white;
+  margin:10px;
+  text-decoration:none;
+  font-weight:bold;
+  padding:6px 12px;
+  border-radius:6px;
+  transition:0.3s;
+}
+
+nav a:hover {
+  background:white;
+  color:black;
+}
+
+/* CONTAINER */
+.container {
+  padding:20px;
+}
+
+/* TITLE CARD */
+.title-card {
+  text-align:center;
+  margin-bottom:20px;
+}
+
+/* SEARCH */
+.search-box {
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.search-box input {
+  padding:10px;
+  border-radius:8px;
+  border:none;
+  width:200px;
+}
+
+.search-box button {
+  padding:10px;
+  border:none;
+  border-radius:8px;
+  background:#007BFF;
+  color:white;
+  cursor:pointer;
+}
+
+.search-box button:hover {
+  background:#0056b3;
+}
+
+/* GRID */
+.grid {
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+  justify-content:center;
+}
+
+/* CARD */
+.card {
+  width:260px;
+  background: rgba(0,0,0,0.5);
+  border-radius:15px;
+  overflow:hidden;
+  transition:0.4s;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+/* IMAGE */
+.card img {
+  width:100%;
+  height:160px;
+  object-fit:cover;
+  transition:0.4s;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+/* CONTENT */
+.card-content {
+  padding:15px;
+  text-align:center;
+}
+
+.card h3 {
+  margin:10px 0;
+}
+
+/* DESCRIPTION */
+.card p {
+  font-size:14px;
+  color:#ddd;
+}
+
+/* BUTTON */
+.card button {
+  margin-top:10px;
+  padding:10px;
+  border:none;
+  border-radius:8px;
+  background:#007BFF;
+  color:white;
+  cursor:pointer;
+  width:100%;
+}
+
+.card button:hover {
+  background:#0056b3;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="Home Page.html">Home</a>
+<a href="f16.html">F-16</a>
+<a href="f35.html">F-35</a>
+<a href="mq9.html">MQ-9</a>
+<a href="leonidas.html">Leonidas</a>
+<a href="zumwalt.html">Zumwalt</a>
+</nav>
+
+<div class="container">
+
+<!-- TITLE -->
+<div class="title-card">
+<h1>Military Technology Hub</h1>
+<p>Explore modern systems across air, sea, and advanced defense platforms.</p>
+</div>
+
+<!-- SEARCH -->
+<div class="search-box">
+<input type="text" id="search" placeholder="Search systems...">
+<button onclick="searchPage()">Search</button>
+</div>
+
+<!-- GRID -->
+<div class="grid">
+
+<div class="card">
+<img src="F-16.jpg">
+<div class="card-content">
+<h3>F-16 Fighting Falcon</h3>
+<p>Discover a fast and agile fighter jet designed for air combat and precision strikes.</p>
+<button onclick="location.href='f16.html'">Explore</button>
+</div>
+</div>
+
+<div class="card">
+<img src="F-35.jpg">
+<div class="card-content">
+<h3>F-35 Lightning II</h3>
+<p>Explore stealth technology, advanced sensors, and next-generation combat capabilities.</p>
+<button onclick="location.href='f35.html'">Explore</button>
+</div>
+</div>
+
+<div class="card">
+<img src="mq-9-reaper.jpg">
+<div class="card-content">
+<h3>MQ-9 Reaper</h3>
+<p>See how unmanned aircraft conduct surveillance and precision operations.</p>
+<button onclick="location.href='mq9.html'">Explore</button>
+</div>
+</div>
+
+<div class="card">
+<img src="Leonidas.jpg">
+<div class="card-content">
+<h3>Leonidas System</h3>
+<p>Learn how high-power microwave technology disables drone threats.</p>
+<button onclick="location.href='leonidas.html'">Explore</button>
+</div>
+</div>
+
+<div class="card">
+<img src="USS Zumwalt.jpg">
+<div class="card-content">
+<h3>USS Zumwalt</h3>
+<p>Explore a stealth naval destroyer with advanced power and weapon systems.</p>
+<button onclick="location.href='zumwalt.html'">Explore</button>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<script>
+function searchPage() {
+let v = document.getElementById("search").value.toLowerCase();
+
+if (v.includes("f16")) location.href="f16.html";
+else if (v.includes("f35")) location.href="f35.html";
+else if (v.includes("mq9")) location.href="mq9.html";
+else if (v.includes("leonidas")) location.href="leonidas.html";
+else if (v.includes("zumwalt")) location.href="zumwalt.html";
+else alert("System not found");
+}
+</script>
+
+</body>
+</html>
