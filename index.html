@@ -7,6 +7,70 @@
 <link rel="icon" href="favicon.png">
 
 <style>
+  /* 🔥 BUTTON STYLE */
+button {
+  margin-top:10px;
+  padding:10px;
+  border:none;
+  border-radius:10px;
+  background: linear-gradient(45deg, #007BFF, #00e6ff);
+  color:white;
+  cursor:pointer;
+  width:100%;
+  font-weight:bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+/* 🔥 BUTTON HOVER */
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(45deg, #00e6ff, #007BFF);
+  box-shadow: 0 0 20px rgba(0,255,255,0.7);
+}
+
+/* 🔥 BUTTON CLICK EFFECT */
+button:active {
+  transform: scale(0.95);
+}
+
+/* 🔥 NAV LINK STYLE */
+nav a {
+  color:white;
+  margin:10px;
+  text-decoration:none;
+  font-weight:bold;
+  padding:6px 12px;
+  border-radius:8px;
+  transition: all 0.3s ease;
+}
+
+/* 🔥 NAV HOVER EFFECT */
+nav a:hover {
+  background: rgba(255,255,255,0.9);
+  color:black;
+  box-shadow: 0 0 10px rgba(255,255,255,0.6);
+  transform: scale(1.1);
+}
+
+/* 🔥 CARD HOVER UPGRADE */
+.card {
+  transition: all 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.04);
+  box-shadow: 0 0 25px rgba(0,255,255,0.5);
+}
+
+/* 🔥 IMAGE ZOOM */
+.card img {
+  transition: all 0.4s ease;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
 body {
   margin:0;
   font-family:Arial;
