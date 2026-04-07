@@ -1,40 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Military Technology Hub</title>
 
+<meta name="description" content="Explore advanced military technology including fighter jets, UAVs, naval systems, and modern defense platforms.">
+<meta name="robots" content="index, follow">
+
 <link rel="icon" href="favicon.png">
+<link rel="shortcut icon" href="favicon.png">
 
 <style>
-  /* 🔥 BUTTON STYLE */
-button {
-  margin-top:10px;
-  padding:10px;
-  border:none;
-  border-radius:10px;
-  background: linear-gradient(45deg, #007BFF, #00e6ff);
+body {
+  margin:0;
+  font-family:Arial;
+  background: linear-gradient(135deg, #0f3d0f, #1a661a);
   color:white;
-  cursor:pointer;
-  width:100%;
-  font-weight:bold;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  animation: fadeIn 0.6s ease-in;
 }
 
-/* 🔥 BUTTON HOVER */
-button:hover {
-  transform: scale(1.05);
-  background: linear-gradient(45deg, #00e6ff, #007BFF);
-  box-shadow: 0 0 20px rgba(0,255,255,0.7);
+@keyframes fadeIn {
+  from {opacity:0;}
+  to {opacity:1;}
 }
 
-/* 🔥 BUTTON CLICK EFFECT */
-button:active {
-  transform: scale(0.95);
+nav {
+  background: rgba(0,0,0,0.85);
+  padding: 14px;
+  text-align: center;
+  backdrop-filter: blur(8px);
 }
 
-/* 🔥 NAV LINK STYLE */
 nav a {
   color:white;
   margin:10px;
@@ -42,56 +41,47 @@ nav a {
   font-weight:bold;
   padding:6px 12px;
   border-radius:8px;
-  transition: all 0.3s ease;
+  transition:0.3s;
 }
 
-/* 🔥 NAV HOVER EFFECT */
 nav a:hover {
-  background: rgba(255,255,255,0.9);
+  background:white;
   color:black;
-  box-shadow: 0 0 10px rgba(255,255,255,0.6);
-  transform: scale(1.1);
 }
 
-/* 🔥 CARD HOVER UPGRADE */
-.card {
-  transition: all 0.4s ease;
+.container {
+  padding:20px;
 }
 
-.card:hover {
-  transform: translateY(-10px) scale(1.04);
-  box-shadow: 0 0 25px rgba(0,255,255,0.5);
+.title-card {
+  text-align:center;
+  margin-bottom:25px;
 }
 
-/* 🔥 IMAGE ZOOM */
-.card img {
-  transition: all 0.4s ease;
+.search-box {
+  text-align:center;
+  margin-bottom:30px;
 }
 
-.card:hover img {
-  transform: scale(1.1);
+.search-box input {
+  padding:10px;
+  border-radius:8px;
+  border:none;
+  width:220px;
 }
-body {
-  margin:0;
-  font-family:Arial;
-  background: linear-gradient(135deg, #0f3d0f, #1a661a);
+
+.search-box button {
+  padding:10px;
+  border:none;
+  border-radius:8px;
+  background:#007BFF;
   color:white;
+  cursor:pointer;
 }
 
-nav {
-  background: rgba(0,0,0,0.8);
-  padding: 14px;
-  text-align: center;
+.search-box button:hover {
+  background:#0056b3;
 }
-
-nav a {
-  color:white;
-  margin:10px;
-  text-decoration:none;
-  font-weight:bold;
-}
-
-.container { padding:20px; }
 
 .grid {
   display:flex;
@@ -102,21 +92,61 @@ nav a {
 
 .card {
   width:260px;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.55);
   border-radius:15px;
   overflow:hidden;
+  transition:0.4s;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 25px rgba(0,255,255,0.6);
 }
 
 .card img {
   width:100%;
   height:160px;
   object-fit:cover;
+  transition:0.4s;
+}
+
+.card:hover img {
+  transform: scale(1.1);
 }
 
 .card-content {
   padding:15px;
   text-align:center;
 }
+
+.card h3 {
+  margin:10px 0;
+}
+
+.card p {
+  font-size:14px;
+  color:#ddd;
+}
+
+.card button {
+  margin-top:10px;
+  padding:10px;
+  border:none;
+  border-radius:10px;
+  background: linear-gradient(45deg, #007BFF, #00e6ff);
+  color:white;
+  cursor:pointer;
+  width:100%;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.card button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0,255,255,0.7);
+}
+
 </style>
 </head>
 
@@ -129,20 +159,27 @@ nav a {
 <a href="mq9.html">MQ-9</a>
 <a href="leonidas.html">Leonidas</a>
 <a href="zumwalt.html">Zumwalt</a>
-  <a href="f22.html">F-22</a>
 </nav>
 
 <div class="container">
 
+<div class="title-card">
 <h1>Military Technology Hub</h1>
+<p>Advanced air, naval, and defense systems shaping modern warfare.</p>
+</div>
+
+<div class="search-box">
+<input type="text" id="search" placeholder="Search systems...">
+<button onclick="searchPage()">Search</button>
+</div>
 
 <div class="grid">
 
 <div class="card">
 <img src="F-16.jpg">
 <div class="card-content">
-<h3>F-16</h3>
-  <p>Made By Lookhead Martin</p>
+<h3>F-16 Fighting Falcon</h3>
+<p>Fast and agile fighter jet designed for air combat and precision strikes.</p>
 <button onclick="location.href='f16.html'">Explore</button>
 </div>
 </div>
@@ -150,8 +187,8 @@ nav a {
 <div class="card">
 <img src="F-35.jpg">
 <div class="card-content">
-<h3>F-35</h3>
-  <p>The flying future</p>
+<h3>F-35 Lightning II</h3>
+<p>Stealth fighter with advanced sensors and next-generation capabilities.</p>
 <button onclick="location.href='f35.html'">Explore</button>
 </div>
 </div>
@@ -159,8 +196,8 @@ nav a {
 <div class="card">
 <img src="mq-9-reaper.jpg">
 <div class="card-content">
-<h3>MQ-9</h3>
-  <p>High agility drone</p>
+<h3>MQ-9 Reaper</h3>
+<p>Unmanned drone for surveillance and precision operations.</p>
 <button onclick="location.href='mq9.html'">Explore</button>
 </div>
 </div>
@@ -168,8 +205,8 @@ nav a {
 <div class="card">
 <img src="Leonidas.jpg">
 <div class="card-content">
-<h3>Leonidas</h3>
-  <p>The revolutionary idea of drone defence</p>
+<h3>Leonidas System</h3>
+<p>High-power microwave system designed to counter drone threats.</p>
 <button onclick="location.href='leonidas.html'">Explore</button>
 </div>
 </div>
@@ -177,8 +214,8 @@ nav a {
 <div class="card">
 <img src="USS Zumwalt.jpg">
 <div class="card-content">
-<h3>Zumwalt</h3>
-  <p>The sailing future</p>
+<h3>USS Zumwalt</h3>
+<p>Stealth destroyer with advanced naval power and weapon systems.</p>
 <button onclick="location.href='zumwalt.html'">Explore</button>
 </div>
 </div>
@@ -186,14 +223,29 @@ nav a {
 <div class="card">
 <img src="f22.jpg">
 <div class="card-content">
-<h3>F-22</h3>
-  <p>Sky controller</p>
+<h3>F-22 Raptor</h3>
+<p>Stealth air superiority fighter with unmatched agility and dominance.</p>
 <button onclick="location.href='f22.html'">Explore</button>
 </div>
 </div>
 
 </div>
+
 </div>
+
+<script>
+function searchPage() {
+let v = document.getElementById("search").value.toLowerCase();
+
+if (v.includes("f16")) location.href="f16.html";
+else if (v.includes("f35")) location.href="f35.html";
+else if (v.includes("mq9")) location.href="mq9.html";
+else if (v.includes("leonidas")) location.href="leonidas.html";
+else if (v.includes("zumwalt")) location.href="zumwalt.html";
+else if (v.includes("f22")) location.href="f22.html";
+else alert("System not found");
+}
+</script>
 
 </body>
 </html>
